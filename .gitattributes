@@ -1,2 +1,9 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Treat CSV files as text
+*.csv text
+
+# Handle Java source files
+*.java text diff=java
+
+# Optional Git LFS for large data or binaries
+*.csv filter=lfs diff=lfs merge=lfs -text
+*.jar filter=lfs diff=lfs merge=lfs -text
